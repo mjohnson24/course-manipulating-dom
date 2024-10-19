@@ -18,6 +18,11 @@ window.loadSlider = function (json) {
 		const divUpdate = document.getElementById("sliderValueDiv");
 		divUpdate.innerHTML = this.value;
 	}
+	slider.onchange = function() {
+		console.log(this.value);
+		const divUpdate = document.getElementById("sliderValueDiv");
+		divUpdate.innerHTML = this.value;
+	}
 
 	// create a question
 	const questionDiv = document.createElement("p");
