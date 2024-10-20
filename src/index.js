@@ -2,9 +2,13 @@
 
 
 window.loadSlider = function (json) {
-	
-	const div = document.getElementById("slider");
+	console.log(json);
+	const obj = JSON.parse(json);
+	console.log(obj);
+	const data = obj.data;
+	console.table(data);
 
+	const div = document.getElementById("slider");
 	// create a slider
 	const createSlider = function() {
 		const slider = document.createElement("input");
@@ -36,6 +40,11 @@ window.loadSlider = function (json) {
 		div.appendChild(questionDiv);
 		div.appendChild(slider);
 	}
-	createSlider();
+
+	data.forEach(function() {
+		createSlider();
+	});
+
+	//createSlider();
   
 }
